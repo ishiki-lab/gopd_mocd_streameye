@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  player:
+    container_name: streameye
+    image: "arupiot/gopd-mocd-streameye:latest"
+    privileged: true
+    volumes:
+       - /dev/video0:/dev/video0
+       - /dev/video1:/dev/video1
+    restart: always
+    ports:
+       - 8080:8080
+    environment:
+      - VIDEO_DEVICE=/dev/video0
