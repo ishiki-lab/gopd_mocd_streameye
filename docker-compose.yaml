@@ -12,4 +12,4 @@ services:
     ports:
        - 8080:8080
     environment:
-      - VIDEO_DEVICE=/dev/video0
+      - VIDEO_DEVICE=/dev/video1
